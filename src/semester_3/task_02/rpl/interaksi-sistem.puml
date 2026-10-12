@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+
+actor Pelanggan
+actor Penjual
+actor Admin
+actor "Payment Gateway" as PG
+actor "Sistem Perbankan" as Bank
+
+rectangle "Sistem Marketplace" {
+  usecase "Registrasi dan Login" as UC1
+  usecase "Melihat dan Memilih Produk" as UC2
+  usecase "Mengelola Keranjang" as UC3
+  usecase "Membuat Pesanan" as UC4
+  usecase "Melakukan Pembayaran" as UC5
+  usecase "Melihat Status dan Resi" as UC6
+  usecase "Memberikan Review" as UC7
+  usecase "Memproses Pesanan" as UC8
+  usecase "Memperbarui Pengiriman" as UC9
+  usecase "Menangani Refund dan Komplain" as UC10
+}
+
+Pelanggan -- UC1
+Pelanggan -- UC2
+Pelanggan -- UC3
+Pelanggan -- UC4
+Pelanggan -- UC5
+Pelanggan -- UC6
+Pelanggan -- UC7
+Pelanggan -- UC10
+
+Penjual -- UC8
+Penjual -- UC9
+Admin -- UC10
+PG -- UC5
+Bank -- UC5
+@enduml

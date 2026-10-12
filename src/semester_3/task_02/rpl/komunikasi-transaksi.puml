@@ -1,0 +1,32 @@
+
+@startuml
+
+actor Pelanggan
+participant Marketplace
+participant "Payment Gateway" as PG
+participant "Sistem Perbankan" as Bank
+participant Penjual
+
+Pelanggan -> Marketplace: Memilih produk dan membuat pesanan
+Marketplace -> Marketplace: Menyimpan data pesanan
+Marketplace --> Pelanggan: Menampilkan total pembayaran
+
+Pelanggan -> Marketplace: Memilih metode pembayaran
+Marketplace -> PG: Mengirim permintaan pembayaran
+PG -> Bank: Meminta verifikasi pembayaran
+Bank --> PG: Mengirim hasil verifikasi
+
+alt Pembayaran berhasil
+  PG --> Marketplace: Konfirmasi pembayaran berhasil
+  Marketplace -> Marketplace: Mengubah status menjadi Diproses
+  Marketplace --> Pelanggan: Konfirmasi pesanan
+  Marketplace -> Penjual: Notifikasi pesanan
+  Penjual -> Penjual: Menyiapkan dan mengirim barang
+  Penjual -> Marketplace: Mengirim nomor resi
+  Marketplace --> Pelanggan: Memberikan nomor resi
+else Pembayaran gagal
+  PG --> Marketplace: Informasi pembayaran gagal
+  Marketplace --> Pelanggan: Menampilkan status pembayaran gagal
+end
+
+@enduml

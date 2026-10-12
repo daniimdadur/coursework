@@ -1,4 +1,4 @@
-package semester_3.task_01;
+package semester_3.task_01.pbd;
 
 public class Menu {
     // Atribut

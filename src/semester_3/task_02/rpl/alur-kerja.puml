@@ -1,0 +1,40 @@
+
+@startuml
+start
+
+:Pelanggan login;
+:Pelanggan memilih produk;
+:Menambahkan produk ke keranjang;
+:Membuat pesanan;
+:Menyimpan data pesanan;
+:Melakukan pembayaran;
+:Payment Gateway meminta verifikasi bank;
+
+if (Pembayaran berhasil?) then (Ya)
+  :Mengubah status pesanan menjadi Diproses;
+  :Mengirim notifikasi kepada penjual;
+  :Penjual menyiapkan pesanan;
+  :Penjual mengirim barang;
+  :Memasukkan nomor resi;
+  :Marketplace memberikan nomor resi kepada pelanggan;
+  stop
+else (Tidak)
+  :Menampilkan status pembayaran gagal;
+  :Pelanggan mencoba membayar kembali;
+  :Melakukan pembayaran;
+  :Payment Gateway meminta verifikasi bank;
+  if (Pembayaran berhasil?) then (Ya)
+    :Mengubah status pesanan menjadi Diproses;
+    :Mengirim notifikasi kepada penjual;
+    :Penjual menyiapkan pesanan;
+    :Penjual mengirim barang;
+    :Memasukkan nomor resi;
+    :Marketplace memberikan nomor resi kepada pelanggan;
+    stop
+  else (Tidak)
+    :Pesanan belum dapat diproses;
+    stop
+  endif
+endif
+
+@enduml

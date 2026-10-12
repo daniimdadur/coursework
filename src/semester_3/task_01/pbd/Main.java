@@ -1,4 +1,4 @@
-package semester_3.task_01;
+package semester_3.task_01.pbd;
 
 import java.util.Scanner;
 
