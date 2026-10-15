@@ -1,0 +1,91 @@
+DAFTAR FITUR APLIKASI RESTORAN
+
+1. FITUR MANAJEMEN MENU
+
+Fitur ini digunakan oleh pemilik restoran untuk mengelola daftar menu makanan dan minuman.
+
+1. Menampilkan Menu
+   - Menampilkan seluruh daftar menu restoran.
+   - Mengelompokkan menu berdasarkan kategori makanan dan minuman.
+   - Menampilkan nomor menu, nama menu, dan harga.
+
+2. Menambahkan Menu
+   - Menambahkan satu atau beberapa menu baru.
+   - Menginput nama menu.
+   - Menginput harga menu.
+   - Memilih kategori menu, yaitu makanan atau minuman.
+   - Memvalidasi nama menu agar tidak kosong atau duplikat.
+
+3. Mengubah Harga Menu
+   - Menampilkan daftar menu restoran.
+   - Memilih menu berdasarkan nomor menu.
+   - Menampilkan nama menu dan harga lama.
+   - Meminta konfirmasi sebelum mengubah harga.
+   - Menginput harga baru jika pengguna memilih "Ya".
+   - Membatalkan perubahan jika pengguna memilih "Tidak".
+
+4. Menghapus Menu
+   - Menampilkan daftar menu restoran.
+   - Memilih menu berdasarkan nomor menu.
+   - Meminta konfirmasi sebelum menghapus menu.
+   - Menghapus menu jika pengguna memilih "Ya".
+   - Membatalkan penghapusan jika pengguna memilih "Tidak".
+
+5. Navigasi Menu
+   - Menampilkan pilihan pengelolaan menu.
+   - Memvalidasi pilihan pengguna.
+   - Kembali ke menu utama jika pengguna memilih menu "Kembali".
+
+2. FITUR MENU PELANGGAN
+
+Fitur ini digunakan oleh pelanggan untuk melihat menu, melakukan pemesanan,
+dan mendapatkan struk pembayaran.
+
+1. Menampilkan Daftar Menu
+   - Menampilkan menu makanan dan minuman.
+   - Mengelompokkan menu berdasarkan kategori.
+   - Menampilkan nama dan harga setiap menu.
+
+2. Pemesanan Makanan dan Minuman
+   - Memasukkan nama menu yang ingin dipesan.
+   - Memasukkan jumlah pesanan.
+   - Memesan beberapa jenis menu dalam satu transaksi.
+   - Menggabungkan jumlah jika menu yang sama dipesan kembali.
+   - Mengulangi input jika nama menu tidak tersedia.
+   - Memvalidasi jumlah pesanan agar lebih dari nol.
+   - Mengakhiri pemesanan dengan mengetik "selesai".
+
+3. Menghitung Total Biaya
+   - Menghitung total harga setiap menu berdasarkan jumlah pesanan.
+   - Menghitung subtotal seluruh pesanan.
+   - Memberikan diskon 10% jika subtotal melebihi Rp100.000.
+   - Menghitung pajak sebesar 10% dari subtotal setelah diskon.
+   - Menambahkan biaya pelayanan sebesar Rp20.000.
+   - Menghitung total pembayaran akhir.
+
+4. Promo Minuman
+   - Memberikan promo beli satu gratis satu untuk Jus Alpukat
+   jika subtotal melebihi Rp50.000.
+   - Menghitung jumlah minuman gratis sesuai jumlah Jus Alpukat yang dibeli.
+   - Menampilkan informasi promo pada struk pembayaran.
+
+5. Mencetak Struk Pembayaran
+   - Menampilkan nama menu yang dipesan.
+   - Menampilkan jumlah pesanan.
+   - Menampilkan harga satuan setiap menu.
+   - Menampilkan total harga setiap menu.
+   - Menampilkan subtotal pesanan.
+   - Menampilkan diskon dan harga setelah diskon.
+   - Menampilkan pajak dan biaya pelayanan.
+   - Menampilkan informasi promo minuman.
+   - Menampilkan total pembayaran akhir.
+
+6. Validasi Pemesanan
+   - Menolak nama menu yang tidak tersedia.
+   - Meminta input ulang jika jumlah pesanan tidak valid.
+   - Menampilkan pesan jika pelanggan tidak melakukan pemesanan.
+
+7. Navigasi Menu
+   - Mengakhiri proses pemesanan setelah pelanggan mengetik "selesai".
+   - Kembali ke menu utama setelah proses pemesanan selesai.
+   - Memberikan pilihan untuk keluar dari aplikasi melalui menu utama.
